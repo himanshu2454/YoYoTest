@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Test.css">
+    
+    <title>Test</title>
+</head>
+<body >
+      
+    <div class="maincontainer">
+            <!--Timer-->
+            <div class="circle" style="position: relative;">
+                <svg width="300" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(110,110)">
+                        <circle r="100" class="e-c-base"/>
+                        <g transform="rotate(-90)">
+                        <circle r="100" class="e-c-progress"/>
+                        <g id="e-pointer">
+                            <circle cx="100" cy="0" r="8" class="e-c-pointer"/>
+                        </g>
+                        </g>
+                    </g>
+                </svg>
+                <div class="controlls">
+                    <div class="display-remain-time">00:30</div>
+                    <button class="play" id="pause"></button>
+                </div>
+            </div>
+            <!--Next button-->
+            <div class="nextlvll">
+                <button id="next">NEXT LVL</button>          
+            </div>
+            <!--Test Panel -->
+            <div class="testpanel">
+                <div class="paneltab">
+                    <div class="paneltxt">
+                        NEXT SHUTTLE
+                    </div>
+                    <div class="panelDetails">
+                        0:00 s
+                    </div>
+                </div>
+                <div class="tabsep">
+
+                </div>
+                <div class="paneltab">
+                    <div class="paneltxt">
+                        TOTAL TIME
+                    </div>
+                    <div class="panelDetails">
+                        0:00 m
+                    </div>
+                </div>
+                <div class="tabsep"> 
+
+                </div>
+                <div class="paneltab">
+                    <div class="paneltxt">
+                        TOTAL DISTANCE
+                    </div>
+                    <div class="panelDetails">
+                        0 m
+                    </div>
+                </div>
+            </div>
+            <!--contestent panel-->
+            <div>
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>Himanshu</td>
+                        <td><button style="content:'Warning'"></button><button style="content:'Stop'"></button></td>
+                    </tr>
+                    <tr>
+                        
+                        <td>1</td>
+                        <td>Himanshu</td>
+                        <td><button style="content:'Warning'"></button><button style="content:'stop'"></button></td>
+
+                    </tr>
+                    <tr>
+                        
+                        <td>1</td>
+                        <td>Himanshu</td>
+                        <td><button style="content:'Warning'"></button><button style="content:'stop'"></button></td>
+
+                    </tr>
+                    
+                </table>
+            </div>
+    </div>
+      
+
+        <script src="Test.js"></script>
+</body>
+</html>
