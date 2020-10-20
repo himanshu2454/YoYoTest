@@ -108,3 +108,49 @@ displayTimeLeft(wholeTime);
 //console.log("here4");
 pauseBtn.addEventListener('click',pauseTimer);
 NextBtn.addEventListener('click', nextlvl);
+NextBtn.addEventListener('click', nextlvl);
+
+
+// Timer code.
+
+var panelDetails = document.getElementById("panelDetails");
+var startTime;
+var updatedTime;
+var difference;
+var tInterval;
+var savedTime;
+var paused = 0;
+var running = 0;
+
+function startTimer(){
+  if(!running){
+    startTime = new Date().getTime();
+    tInterval = setInterval(getShowTime, 1000);
+// change 1 to 1000 above to run script every second instead of every millisecond. one other change will be needed in the getShowTime() function below for this to work. see comment there.   
+ 
+    paused = 0;
+    running = 1;
+    panelDetails.style.background = "#FF0000";
+    panelDetails.style.cursor = "auto";
+    panelDetails.style.color = "yellow";
+  }
+}
+
+function getShowTime(){
+  updatedTime = new Date().getTime();
+  if (savedTime){
+    difference = (updatedTime - startTime) + savedTime;
+  } else {
+    difference =  updatedTime - startTime;
+  }
+  // var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  minutes = (minutes < 10) ? "0" + minutes : minutes;
+
+  panelDetails.innerHTML = minutes + ':' + seconds;
+}
+
+
+NextBtn.addEventListener('click', nextlvl);
+NextBtn.addEventListener('click', startTimer);
